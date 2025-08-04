@@ -23,7 +23,7 @@ export const HomePage = () => {
       try {
         setIsLoading(true);
         const response = await axios.post(
-          "http://localhost:5000/api/light-house-report",
+          "http://seo-calculator.travclan.com/api/light-house-report",
           { domain },
           { responseType: "text" }
         );
