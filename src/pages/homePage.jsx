@@ -1,11 +1,5 @@
-import {
-  Box,
-  Button,
-  FormControl,
-  FormHelperText,
-  TextField,
-  Typography,
-} from "@mui/material";
+// @ts-nocheck
+import { Box, Button, FormControl, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import domainRegex from "../regex";
 import axios from "axios";
@@ -23,7 +17,7 @@ export const HomePage = () => {
       try {
         setIsLoading(true);
         const response = await axios.post(
-          "http://seo-calculator.travclan.com/api/light-house-report",
+          import.meta.env.VITE_APP_BASE_URL,
           { domain },
           { responseType: "text" }
         );
